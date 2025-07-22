@@ -1,16 +1,7 @@
 # marcom_qr
 
-A new Flutter project.
+Marcom Arabia Qr Scanner
 
-## Getting Started
+- 🖼️ QR code image included in assets: `/assets/img/REG1234.png` (or similar)
+- Connected To AWS EC2 API (url can be changed fron /lib/core/constants/newtwork_const.dart) 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
