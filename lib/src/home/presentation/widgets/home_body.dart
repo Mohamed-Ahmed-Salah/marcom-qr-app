@@ -101,26 +101,47 @@ class _HomeBodyState extends State<HomeBody>
             ),
           ),
           child: Stack(
+            clipBehavior: Clip.antiAlias, // Add this line
             children: [
               ///top
-              AnimatedPositioned(
-                left: 0,
-                right: 0,
-                top: _toggled ? -100.h : 0,
-                duration: SizeConstants.mainDuration,
-                child: TexturedContainer(),
+              ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(SizeConstants.innerBorderRadius),
+                ),
+                child: AnimatedContainer(
+                  duration: SizeConstants.mainDuration,
+                  transform: Matrix4.translationValues(
+                    0,
+                    _toggled ? -100.h : 0,
+                    0,
+                  ),
+
+                  child: TexturedContainer(),
+                ),
               ),
 
               ///bottom
-              AnimatedPositioned(
-                duration: SizeConstants.mainDuration,
-                bottom: _toggled ? -100.h : 0,
+              Positioned(
                 left: 0,
                 right: 0,
-                child: Transform.flip(
-                  flipY: true,
-                  flipX: true,
-                  child: TexturedContainer(),
+                bottom: 0,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(SizeConstants.innerBorderRadius),
+                  ),
+                  child: AnimatedContainer(
+                    duration: SizeConstants.mainDuration,
+                    transform: Matrix4.translationValues(
+                      0,
+                      _toggled ? 100.h : 0,
+                      0,
+                    ),
+                    child: Transform.flip(
+                      flipY: true,
+                      flipX: true,
+                      child: TexturedContainer(),
+                    ),
+                  ),
                 ),
               ),
 
