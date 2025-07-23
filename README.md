@@ -6,7 +6,7 @@ Marcom Arabia Qr Scanner
 - Connected To AWS EC2 API (url can be changed fron /lib/core/constants/newtwork_const.dart)
 - The design was inspired by: https://dribbble.com/shots/24204854-Enable-Camera-Access-Interaction
 
-When rinning in IOS update podfile post_install to:
+When running in IOS update podfile post_install to:
 
 ```
 post_install do |installer|
