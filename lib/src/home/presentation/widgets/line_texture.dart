@@ -6,7 +6,7 @@ class DiagonalLinesPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colours.kWhite.withOpacity(0.1)
+      ..color = Colours.kWhite.withValues(alpha:0.1)
       ..strokeWidth = 1.0
       ..style = PaintingStyle.stroke;
 

@@ -31,7 +31,7 @@ class AnimatedLoader extends StatelessWidget {
                 border: Border.all(color: Colours.borderColor),
                 boxShadow: [
                   BoxShadow(
-                    color: Colours.kBlack.withOpacity(0.2),
+                    color: Colours.kBlack.withValues(alpha: 0.2),
                     spreadRadius: 5,
                     blurRadius: 7,
                     offset: const Offset(0, 3), // changes position of shadow

@@ -41,7 +41,7 @@ class ErrorAlertDialog extends StatelessWidget {
                 border: Border.all(color: Colours.borderColor),
                 boxShadow: [
                   BoxShadow(
-                    color: Colours.kBlack.withOpacity(0.2),
+                    color: Colours.kBlack.withValues(alpha:0.2),
                     spreadRadius: 5,
                     blurRadius: 7,
                     offset:
@@ -82,7 +82,7 @@ class ErrorAlertDialog extends StatelessWidget {
                               ?.copyWith(
                               fontWeight: FontWeight.w400,
                               color: Colours.textBlackColor
-                                  .withOpacity(0.7)),
+                                  .withValues(alpha:0.7)),
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
