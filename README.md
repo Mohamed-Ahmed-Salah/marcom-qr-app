@@ -8,22 +8,20 @@ Marcom Arabia Qr Scanner
 
 When rinning in IOS update podfile post_install to:
 
+```
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
     target.build_configurations.each do |config|
-
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
             '$(inherited)',
-
             #dart: PermissionGroup.camera
             'PERMISSION_CAMERA=1',
-
           ]
-
      end
   end
 end
+```
 
 ## Demo Video Link
 https://drive.google.com/file/d/1xLlem7Sz17LY5ds5mbGqyP8GFqzfWyc3/view?usp=sharing
